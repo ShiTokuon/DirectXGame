@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 #include "Audio.h"
-#include "DirectXCommon.h"
 #include "DebugText.h"
+#include "DirectXCommon.h"
 #include "Input.h"
 #include "Model.h"
 #include "SafeDelete.h"
@@ -47,8 +47,25 @@ class GameScene {
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
+	//テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+	//スプライトの生成
+	Sprite* sprite_ = nullptr;
+	// 3Dモデル
+	Model* model_ = nullptr;
+	//サウンドデータハンドル
+	uint32_t soundDataHandle_ = 0;
+	//音声再生ハンドル
+	uint32_t voiceHanldle_ = 0;
+	//値を表示したい変数
+	int32_t valute_ = 0;
 
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
+	//ワールドトランスフォーム
+	WorldTransform worldtransform_;
+
+	//ビュープロテクション
+	ViewProjection viewprojection_;
 };
