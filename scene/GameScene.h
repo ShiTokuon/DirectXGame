@@ -59,6 +59,7 @@ class GameScene {
 	uint32_t voiceHanldle_ = 0;
 	//値を表示したい変数
 	int32_t valute_ = 0;
+	//テクスチャハンドル
 
 	/// <summary>
 	/// ゲームシーン用

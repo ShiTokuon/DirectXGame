@@ -25,6 +25,12 @@ void GameScene::Initialize() {
 	sprite_ = Sprite::Create(textureHandle_, {100, 50});
 	// 3Dモデルの生成
 	model_ = Model::Create();
+	// x,y,z方向のスケーリングを設定
+	worldtransform_.scale_ = {5.0f, 5.0, 5.0f};
+	// x,y,z軸周りの回転角を設定
+	worldtransform_.rotation_ = {XM_PI / 4.0f, XM_PI / 4.0f, 0.0f};
+	// x,y,z軸周りの平行移動を設定
+	worldtransform_.translation_ = {10.0f, 10.0f, 10.0f};
 	//ワールドトランスフォームの初期化
 	worldtransform_.Initialize();
 	//ビュープロテクションの初期化
@@ -32,9 +38,9 @@ void GameScene::Initialize() {
 	//サウンドデータの読み込み
 	soundDataHandle_ = audio_->LoadWave("se_sad03.wav");
 	//音声再生
-	audio_->PlayWave(soundDataHandle_);
+	// audio_->PlayWave(soundDataHandle_);
 	//音声再生ループ
-	voiceHanldle_ = audio_->PlayWave(soundDataHandle_, true);
+	// voiceHanldle_ = audio_->PlayWave(soundDataHandle_, true);
 }
 
 void GameScene::Update() {
@@ -56,15 +62,15 @@ void GameScene::Update() {
 	// debugText_->Print("Kaizokou ni oreha naru.", 50, 50, 1.0f);
 
 	//書式設定付きの表示
-	debugText_->SetPos(50, 70);
-	debugText_->Printf("year:%d", 2001);
+	//debugText_->SetPos(50, 70);
+	//debugText_->Printf("year:%d", 2001);
 
 	//変数の値をインクリメント
-	valute_++;
+	//valute_++;
 	//値を含んだ文字列
-	std::string strDebug = std::string("Valur:") + std::to_string(valute_);
+	//std::string strDebug = std::string("Valur:") + std::to_string(valute_);
 	//デバックテキストの表示
-	debugText_->Print(strDebug, 50, 50, 1.0f);
+	//debugText_->Print(strDebug, 50, 50, 1.0f);
 }
 
 void GameScene::Draw() {
@@ -79,7 +85,7 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに背景スプライトの描画処理を追加できる
 	/// </summary>
-	sprite_->Draw();
+	// sprite_->Draw();
 
 	// スプライト描画後処理
 	Sprite::PostDraw();
