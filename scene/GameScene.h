@@ -59,14 +59,16 @@ class GameScene {
 	uint32_t voiceHanldle_ = 0;
 	//値を表示したい変数
 	int32_t valute_ = 0;
+	//カメラ上方向の角度
+	float viewAngle = 0.0f;
 	//テクスチャハンドル
 
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
 	//ワールドトランスフォーム
-	WorldTransform worldtransform_;
+	WorldTransform worldTransform_[100];
 
 	//ビュープロテクション
-	ViewProjection viewprojection_;
+	ViewProjection viewProjection_;
 };
