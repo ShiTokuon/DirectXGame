@@ -283,7 +283,7 @@ void GameScene::Update() {
 		//デバック用表示
 		//大元
 		debugText_->SetPos(50, 150);
-		debugText_->Printf("Root:(%f,%f,%f)", worldTransform_[PartId::Root].rotation_.x,
+		debugText_->Printf("Root:(%f,%f,%f)", worldTransform_[PartId::Root].translation_.x,
 			worldTransform_[PartId::Root].translation_.y,
 			worldTransform_[PartId::Root].translation_.z);
 	}
